@@ -1,12 +1,26 @@
 // Create a 16 x 16 grid
 
-const gridContainer = document.querySelector(".grid-container");
+const grid = document.querySelector(".grid");
 
-for (let i = 0; i < 16; i++) {
-  for (let j = 0; j < 16; j++) {
-    const grid = document.createElement("div");
-    gridContainer.appendChild(grid);
-    grid.style.cssText = "border: 1px solid black; height: 25px; width: 25px";  
-    grid.classList.toggle('grid')
+function makeGrid() {
+  size = +prompt("How big should the grid be?");
+  if (size > 2 && size < 100) {
+    for (let i = 0; i < size; i++) {
+      for (let j = 0; j < size; j++) {
+        let cell = document.createElement("div");
+        grid.appendChild(cell);
+        cell.classList.toggle("cell");
+        cell.style.width = `calc(100% / ${size} - ${2 * 1}px`;
+        cell.style.height = `calc(100% / ${size} - ${2 * 1}px`;
+        cell.addEventListener("mouseover", () => {
+          cell.style.backgroundColor = "black";
+        });
+      }
+    }
   }
+}
+
+function clearGrid() {
+  const cells = document.querySelectorAll('.cell')
+  console.log(cells)
 }
