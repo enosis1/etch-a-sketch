@@ -1,8 +1,11 @@
 // Create a 16 x 16 grid
 
 const grid = document.querySelector(".grid");
+const btn = document.querySelector('button')
+btn.addEventListener('click', makeGrid)
 
 function makeGrid() {
+  clearGrid()
   size = +prompt("How big should the grid be?");
   if (size > 2 && size < 100) {
     for (let i = 0; i < size; i++) {
@@ -23,4 +26,7 @@ function makeGrid() {
 function clearGrid() {
   const cells = document.querySelectorAll('.cell')
   console.log(cells)
+  cells.forEach(cell => {
+    cell.remove()
+  })
 }
