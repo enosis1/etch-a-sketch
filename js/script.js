@@ -7,7 +7,7 @@ btn.addEventListener("click", makeGrid);
 function makeGrid() {
   clearGrid();
   size = +prompt("How big should the grid be?");
-  if (size > 2 && size < 100) {
+  if (size >= 2 && size < 100) {
     for (let i = 0; i < size; i++) {
       for (let j = 0; j < size; j++) {
         let cell = document.createElement("div");
