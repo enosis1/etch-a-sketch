@@ -11,9 +11,10 @@
   width: 600px;
   height: 600px;
   margin: auto;
+  border: 1px solid black;
 }
 
 .cell {
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   flex: auto;
 }

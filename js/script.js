@@ -13,8 +13,8 @@ function makeGrid() {
         let cell = document.createElement("div");
         grid.appendChild(cell);
         cell.classList.toggle("cell");
-        cell.style.width = `calc(100% / ${size} - ${2 * 1}px`;
-        cell.style.height = `calc(100% / ${size} - ${2 * 1}px`;
+        cell.style.width = `calc(100% / ${size}`;
+        cell.style.height = `calc(100% / ${size}`;
         cell.addEventListener("mouseover", () => {
           let red = Math.floor(Math.random() * 256);
           let green = Math.floor(Math.random() * 256);
